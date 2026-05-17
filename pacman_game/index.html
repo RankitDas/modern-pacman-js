@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 PAC-MAN 🎮</h1>
+            <div class="score-display">
+                <span>SCORE: <span id="score">0</span></span>
+                <span>LIVES: <span id="lives">3</span></span>
+                <span class="level-display">LVL: 1</span>
+            </div>
+        </div>
+        
+        <div class="game-wrapper">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            
+            <div id="startScreen" class="screen">
+                <h2>PAC-MAN</h2>
+                <p>Use Arrow Keys or WASD to move</p>
+                <p>Eat all pellets to win!</p>
+                <p>Avoid the ghosts</p>
+                <button id="startBtn" class="btn">START GAME</button>
+            </div>
+            
+            <div id="gameOverScreen" class="screen hidden">
+                <h2>GAME OVER</h2>
+                <p id="gameOverMessage"></p>
+                <button id="restartBtn" class="btn">RESTART</button>
+            </div>
+            
+            <div id="pauseMenu" class="screen hidden">
+                <h2>PAUSED</h2>
+                <p>Press P or click to resume</p>
+                <button id="resumeBtn" class="btn">RESUME</button>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <p><strong>Controls:</strong> Arrow Keys or WASD | P to Pause | M to Mute</p>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
